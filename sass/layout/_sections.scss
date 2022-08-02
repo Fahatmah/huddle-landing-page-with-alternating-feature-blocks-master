@@ -1,0 +1,114 @@
+@use "../abstracts" as *;
+
+//main page
+.main.page {
+  width: 100%;
+  @include centeredWithMargin;
+  gap: 2.5rem;
+  padding: 3rem 1rem;
+  @include tablet {
+    flex-direction: row;
+
+    img {
+      width: min(100% - 20rem, 700px);
+    }
+  }
+
+  .texts {
+    display: flex;
+    gap: 1.6rem;
+    max-width: 36rem;
+    @include tablet {
+      @include flexContentToStart;
+      text-align: left;
+    }
+
+    h1 {
+      font-size: 1.3rem;
+      color: $Very-Dark-Cyan;
+      padding: 0 1rem;
+      @include tablet {
+        padding: 0;
+      }
+      @include laptop {
+        font-size: 2rem;
+      }
+    }
+    p {
+      font-size: 0.85rem;
+      color: $Very-Dark-Cyan;
+    }
+  }
+}
+
+//containers
+.page.two {
+  width: 100%;
+  position: relative;
+  background-color: $White;
+  padding: 3rem 0 12rem 0;
+  gap: 2.2rem;
+
+  .container,
+  .question {
+    @include centeredWithMargin;
+    border-radius: 12px;
+    box-shadow: $boxShadow;
+  }
+
+  .container {
+    padding: 2rem;
+    gap: 2.5rem;
+    flex-direction: column-reverse;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-inline: 4rem;
+    }
+
+    img {
+      width: 18rem;
+      @include laptop {
+        width: 25rem;
+      }
+    }
+
+    .texts {
+      gap: 1rem;
+      @include tablet {
+        @include flexContentToStart;
+        text-align: left;
+      }
+
+      h2 {
+        color: $Very-Dark-Cyan;
+        font-size: 1.1rem;
+      }
+      p {
+        font-size: 0.8rem;
+        color: $Grayish-Blue;
+        max-width: 22.1rem;
+      }
+    }
+  }
+
+  .row-reverse {
+    @include tablet {
+      flex-direction: row-reverse;
+    }
+  }
+  
+  .question {
+    gap: 1rem;
+    position: absolute;
+    bottom: -3.5rem;
+    background-color: $White;
+    padding: 2rem 1.5rem;
+    max-width: 30rem;
+
+    h2 {
+      font-size: 1rem;
+      color: $Very-Dark-Cyan;
+    }
+  }
+}

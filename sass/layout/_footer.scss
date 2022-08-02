@@ -1,0 +1,122 @@
+@use "../abstracts" as *;
+
+footer {
+  background-color: $Very-Dark-Cyan;
+  padding: 6rem 0 2rem 0;
+  width: 100%;
+
+  .footer_container {
+    text-align: left;
+    gap: 1.5rem;
+    @include centeredWithMargin;
+    margin-inline: auto;
+
+    .footer_logo {
+      width: 8rem;
+      justify-self: flex-start;
+      align-self: flex-start;
+    }
+
+    img {
+      filter: brightness(0) invert(1);
+    }
+
+    .get_in_touch_container {
+      @include flexContents(column);
+      @include flexSelfToStart;
+      gap: 2rem;
+      @include tablet {
+        flex-direction: row;
+        @include flexContentToStart;
+        @include flexSelfToStart;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .contacts {
+        text-align: left;
+        @include flexContentToStart;
+        gap: 1rem;
+        max-width: 20rem;
+
+        .contact {
+          @include flexContents(row);
+          justify-content: flex-start;
+          gap: 1rem;
+
+          .aligned-start {
+            align-self: flex-start;
+          }
+        }
+      }
+
+      .contact,
+      .links {
+        a {
+          display: block;
+          color: $White;
+          font-size: 0.9rem;
+          font-weight: 100;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .links {
+        @include laptop {
+            @include flexContents(row);
+            @include flexSelfToStart;
+            gap: 4rem;
+            // width: 100%;
+        }
+      }
+
+      .icons_copyright {
+        gap: 1rem;
+        @include tablet {
+          @include flexContentToStart;
+          gap: 9.5rem;
+        }
+
+        .sm {
+          flex-direction: row;
+          gap: 1rem;
+
+          a {
+            display: block;
+            border: 1px solid $White;
+            border-radius: 50%;
+            padding: 0.5rem;
+
+            &:hover {
+              border-color: $Pink;
+
+              &:hover > img {
+                filter: $imgInvertToPink;
+              }
+            }
+
+            img {
+              width: 1rem;
+            }
+
+            .fb {
+              height: 1rem;
+            }
+          }
+        }
+        p {
+          color: $White;
+          font-size: 0.8rem;
+          font-weight: 100;
+          @include tablet {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

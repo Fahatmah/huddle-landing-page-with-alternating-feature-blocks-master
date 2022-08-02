@@ -1,0 +1,17 @@
+@use "../abstracts" as *;
+
+header {
+  @include flexContents(row);
+  justify-content: space-between;
+  margin: 1.3rem 1rem;
+  @include tablet {
+    @include centeredWithMargin;
+  }
+
+  img {
+    width: 5.5rem;
+    @include tablet {
+        width: 10rem;
+    }
+  }
+}

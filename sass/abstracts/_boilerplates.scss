@@ -1,0 +1,56 @@
+@use "../abstracts" as *;
+
+html {
+  font-size: 100%;
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include laptop {
+    font-size: 22px;
+  }
+}
+
+body {
+  width: 100%;
+  font-size: 18px;
+  font-family: $openSans;
+  font-weight: 400;
+  @include flexContents(column);
+  background-image: url("../../assets/bg-hero-mobile.svg");
+  background-position: top;
+  background-color: $Very-Pale-Cyan;
+}
+
+button {
+  transition: 0.3s ease-in-out;
+}
+
+section {
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+  background-color: $White;
+}
+
+.page,
+.texts,
+.container,
+.question,
+.footer_container,
+.contacts,
+.links,
+.link,
+.icons_copyright,
+.sm {
+  @include flexContents(column);
+  text-align: center;
+}
+
+.links,
+.link,
+.link > * {
+  @include flexSelfToStart;
+}

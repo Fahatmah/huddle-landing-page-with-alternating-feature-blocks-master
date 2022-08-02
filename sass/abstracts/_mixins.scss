@@ -1,0 +1,30 @@
+@mixin flexContents($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+@mixin button {
+  outline: none;
+  border: none;
+  border-radius: 20px;
+}
+
+@mixin centeredWithMargin {
+  width: min(100% - 2rem, 1300px);
+  margin-inline: auto;
+  //   max-width: 1400px;
+  //   margin-inline: 2rem;
+}
+
+@mixin flexContentToStart {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@mixin flexSelfToStart {
+  justify-self: flex-start;
+  align-self: flex-start;
+  gap: 1rem;
+}

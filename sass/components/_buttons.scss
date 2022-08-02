@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+
+header {
+  button {
+    @include button;
+    padding: 0.2rem 1.2rem;
+    background-color: $White;
+    box-shadow: $boxShadow;
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: $Very-Dark-Cyan;
+    @include tablet {
+      font-size: 0.7rem;
+      padding-inline: 2rem;
+    }
+    &:hover {
+      color: $Grayish-Blue;
+    }
+  }
+}
+
+.main,
+.question {
+  button {
+    @include button;
+    padding: 0.5rem 3rem;
+    background-color: $Pink;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: $Very-Pale-Cyan;
+    box-shadow: 1px 2px 10px rgba(255, 82, 191, 0.5);
+
+    &:hover {
+      background-color: rgb(253, 127, 207);
+    }
+  }
+}
