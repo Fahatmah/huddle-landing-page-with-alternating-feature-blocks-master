@@ -19,6 +19,7 @@ body {
   @include flexContents(column);
   background-image: url("../../assets/bg-hero-mobile.svg");
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: top;
   background-color: $Very-Pale-Cyan;
 }
